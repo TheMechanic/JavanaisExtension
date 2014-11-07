@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Traducteur Javanais{% endblock %}
+
+
+{% block body %}
+    <h1 class="text-center">Traducteur Javanais</h1>
+
+    <p>Rentrez votre texte pour obtenir sa traduction en Javanais ! :)</p>
+    
+
+    {{ form_start(form) }}
+    <div class="form-group">
+        {{ form_widget(form.inputtext, {attr : {'class' : 'form-control'}}) }}
+    </div>
+    <input type="submit" class="btn btn-success" value="Traduire" style="width:100%;" />
+    {{ form_end(form) }}
+
+    {% if textToTranslate is not null %}
+        <hr />
+        <p>"{{ textToTranslate | javanais }}"</p>
+    {% endif %}
+
+{% endblock %}

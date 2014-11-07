@@ -1,0 +1,3 @@
+javanais_homepage:
+    path:     /translate
+    defaults: { _controller: JavanaisBundle:Default:index }
